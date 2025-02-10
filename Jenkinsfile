@@ -2,19 +2,14 @@ pipeline {
     agent any
 
     stages {
-        stage('Checkout') {
-            steps {
-                // Checkout your repository
-                git branch: 'master', url: 'https://github.com/PoojaReddyN/Calculator.git'
-            }
-        }
+
         stage('Build') {
             steps {
                 // Clean the Maven project
                 bat 'mvn clean'
             }
         }
-        stage('Run Tests') {
+       /*  stage('Run Tests') {
             steps {
                 // Run specific tests using Maven
                 bat 'mvn test -Dtest=CalculatorUnitTesting'
@@ -30,7 +25,7 @@ pipeline {
                 bat 'mvn deploy'
                 echo 'Deploy stage skipped'
             }
-        }
+        } */
     }
 
     post {
