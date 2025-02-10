@@ -9,23 +9,6 @@ pipeline {
                 bat 'mvn clean'
             }
         }
-       /*  stage('Run Tests') {
-            steps {
-                // Run specific tests using Maven
-                bat 'mvn test -Dtest=CalculatorUnitTesting'
-            }
-        }
-        stage('Deploy') {
-            when {
-                // Skip this stage conditionally based on a predefined variable or condition
-                expression { false }
-            }
-            steps {
-                // Deploy step using Maven (will be skipped due to the when condition)
-                bat 'mvn deploy'
-                echo 'Deploy stage skipped'
-            }
-        } */
     }
 
     post {
