@@ -1,0 +1,18 @@
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="CalculatorSuite" parallel="methods" thread-count="4">
+
+    <listeners>
+        <listener class-name="MyListeners.MyTestListener"/>
+        <listener class-name="MyListeners.MyRetryAnalyzer"/>
+        <listener class-name="MyListeners.MyReporter"/>
+    </listeners>
+
+    <test name="CalculatorTest">
+
+        <classes>
+            <class name="CalculatorUnitTesting">
+            </class>
+        </classes>
+    </test>
+
+</suite>
